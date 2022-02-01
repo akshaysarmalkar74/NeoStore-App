@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92518AF727A9779F0037CB3D /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92518AF627A9779F0037CB3D /* APIServices.swift */; };
 		925EE46B27A93FDB00B2B73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE46A27A93FDB00B2B73F /* AppDelegate.swift */; };
 		925EE46D27A93FDB00B2B73F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE46C27A93FDB00B2B73F /* SceneDelegate.swift */; };
 		925EE47427A93FDD00B2B73F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925EE47327A93FDD00B2B73F /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92518AF627A9779F0037CB3D /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		925EE46727A93FDB00B2B73F /* NeoStore Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NeoStore Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925EE46A27A93FDB00B2B73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925EE46C27A93FDB00B2B73F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		925EE48A27A952E000B2B73F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				92518AF627A9779F0037CB3D /* APIServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				925EE48027A9443900B2B73F /* DemoViewController.swift in Sources */,
 				925EE46B27A93FDB00B2B73F /* AppDelegate.swift in Sources */,
 				925EE46D27A93FDB00B2B73F /* SceneDelegate.swift in Sources */,
+				92518AF727A9779F0037CB3D /* APIServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
