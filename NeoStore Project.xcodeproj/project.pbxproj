@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92028AC427ABD71000C54D37 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92028AC327ABD71000C54D37 /* UserService.swift */; };
 		92518AF727A9779F0037CB3D /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92518AF627A9779F0037CB3D /* APIServices.swift */; };
 		92518AF927A9917E0037CB3D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92518AF827A9917E0037CB3D /* APIManager.swift */; };
 		92518AFB27A992000037CB3D /* EnumConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92518AFA27A992000037CB3D /* EnumConstants.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92028AC327ABD71000C54D37 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		92518AF627A9779F0037CB3D /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		92518AF827A9917E0037CB3D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		92518AFA27A992000037CB3D /* EnumConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumConstants.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		925EE48C27A9532000B2B73F /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				92028AC327ABD71000C54D37 /* UserService.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				92A92DEF27AB9A2100FCEE14 /* ColorExtension.swift in Sources */,
 				925EE48E27A9556300B2B73F /* StringConstants.swift in Sources */,
 				925EE48027A9443900B2B73F /* DemoViewController.swift in Sources */,
+				92028AC427ABD71000C54D37 /* UserService.swift in Sources */,
 				925EE46B27A93FDB00B2B73F /* AppDelegate.swift in Sources */,
 				925EE46D27A93FDB00B2B73F /* SceneDelegate.swift in Sources */,
 				92518AF727A9779F0037CB3D /* APIServices.swift in Sources */,

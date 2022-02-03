@@ -42,6 +42,7 @@ class LoginScreenViewController: UIViewController {
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         print("Login Tapped")
     }
+    
     @IBAction func forgotBtnTapped(_ sender: Any) {
         print("Forgot Tapped")
     }
@@ -60,6 +61,25 @@ extension LoginScreenViewController {
         // Add gestures
         addTapGestureToView()
         addTapGestureToPlusIcon()
+        
+        // Customise Text Fields
+        customiseTextField(textField: usernameField, imgName: "username_icon")
+        customiseTextField(textField: passwordField, imgName: "password_icon")
+    }
+    
+    // Customise Text Fields
+    func customiseTextField(textField: UITextField, imgName: String) {
+        
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
+        let image = UIImage(named: imgName)
+        imageView.image = image
+        imageView.contentMode = .center
+        imageView.backgroundColor = UIColor.red
+
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imageView)
+        textField.leftViewMode = UITextField.ViewMode.always
+        textField.leftView = view
     }
     
     // Add Tap Gesture to View
