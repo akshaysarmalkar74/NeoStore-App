@@ -9,11 +9,15 @@ import UIKit
 
 class LoginScreenViewController: UIViewController {
 
+    // MARK:- Outlets
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var plusIcon: UIImageView!
     
-    init() {
+    var viewModel: LoginScreenViewType!
+    
+    init(viewModel: LoginScreenViewType) {
+        self.viewModel = viewModel
         super.init(nibName: "LoginScreenViewController", bundle: nil)
     }
     
@@ -40,23 +44,7 @@ class LoginScreenViewController: UIViewController {
     }
 
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        UserService.userLogin(username: "akshay@kumar.com", password: "akshay123") { res in
-            switch res {
-            case .success(value: let value):
-                if let curData = value as? Data {
-                    do {
-                        let mainData = try JSONSerialization.jsonObject(with: curData, options: .mutableContainers)
-                        print(mainData)
-                    } catch let err {
-                        print("Some Error")
-                    }
-                } else {
-                    print("Some Another Error")
-                }
-            case .failure(error: let error):
-                print(error.localizedDescription)
-            }
-        }
+        viewModel.doLogin(username: "akshay@kumar.com", password: "akshay123")
     }
     
     @IBAction func forgotBtnTapped(_ sender: Any) {
@@ -92,6 +80,7 @@ extension LoginScreenViewController {
         imageView.contentMode = .center
         imageView.backgroundColor = UIColor.red
 
+        // Create Container View
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
         view.addSubview(imageView)
         textField.leftViewMode = UITextField.ViewMode.always
