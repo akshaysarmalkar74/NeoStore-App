@@ -19,6 +19,9 @@
 		925EE48E27A9556300B2B73F /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE48D27A9556300B2B73F /* StringConstants.swift */; };
 		92A92DE927AAA13000FCEE14 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A92DE727AAA13000FCEE14 /* LoginScreenViewController.swift */; };
 		92A92DEA27AAA13000FCEE14 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A92DE827AAA13000FCEE14 /* LoginScreenViewController.xib */; };
+		92A92DEF27AB9A2100FCEE14 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A92DEE27AB9A2100FCEE14 /* ColorExtension.swift */; };
+		92A92DF227AB9C1B00FCEE14 /* GothamBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92A92DF127AB9C1B00FCEE14 /* GothamBold.otf */; };
+		92A92DF427AB9C3100FCEE14 /* GothamMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92A92DF327AB9C3100FCEE14 /* GothamMedium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		925EE48D27A9556300B2B73F /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		92A92DE727AAA13000FCEE14 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		92A92DE827AAA13000FCEE14 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
+		92A92DEE27AB9A2100FCEE14 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		92A92DF127AB9C1B00FCEE14 /* GothamBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBold.otf; sourceTree = "<group>"; };
+		92A92DF327AB9C3100FCEE14 /* GothamMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		925EE48627A94FAC00B2B73F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				92A92DEB27AB97B200FCEE14 /* Extensions Group */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -181,6 +188,40 @@
 			path = LoginScreenViewController;
 			sourceTree = "<group>";
 		};
+		92A92DEB27AB97B200FCEE14 /* Extensions Group */ = {
+			isa = PBXGroup;
+			children = (
+				92A92DED27AB981400FCEE14 /* Colors */,
+				92A92DEC27AB980300FCEE14 /* Fonts */,
+			);
+			path = "Extensions Group";
+			sourceTree = "<group>";
+		};
+		92A92DEC27AB980300FCEE14 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92A92DF027AB9BCC00FCEE14 /* Custom Fonts */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		92A92DED27AB981400FCEE14 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				92A92DEE27AB9A2100FCEE14 /* ColorExtension.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		92A92DF027AB9BCC00FCEE14 /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92A92DF327AB9C3100FCEE14 /* GothamMedium.otf */,
+				92A92DF127AB9C1B00FCEE14 /* GothamBold.otf */,
+			);
+			path = "Custom Fonts";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,9 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				925EE47727A93FDD00B2B73F /* LaunchScreen.storyboard in Resources */,
+				92A92DF227AB9C1B00FCEE14 /* GothamBold.otf in Resources */,
 				925EE48127A9443900B2B73F /* DemoViewController.xib in Resources */,
 				92A92DEA27AAA13000FCEE14 /* LoginScreenViewController.xib in Resources */,
 				925EE47427A93FDD00B2B73F /* Assets.xcassets in Resources */,
+				92A92DF427AB9C3100FCEE14 /* GothamMedium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +298,7 @@
 				92518AFB27A992000037CB3D /* EnumConstants.swift in Sources */,
 				92518AF927A9917E0037CB3D /* APIManager.swift in Sources */,
 				92A92DE927AAA13000FCEE14 /* LoginScreenViewController.swift in Sources */,
+				92A92DEF27AB9A2100FCEE14 /* ColorExtension.swift in Sources */,
 				925EE48E27A9556300B2B73F /* StringConstants.swift in Sources */,
 				925EE48027A9443900B2B73F /* DemoViewController.swift in Sources */,
 				925EE46B27A93FDB00B2B73F /* AppDelegate.swift in Sources */,
