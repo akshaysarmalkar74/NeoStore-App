@@ -40,7 +40,23 @@ class LoginScreenViewController: UIViewController {
     }
 
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        print("Login Tapped")
+        UserService.userLogin(username: "akshay@kumar.com", password: "akshay123") { res in
+            switch res {
+            case .success(value: let value):
+                if let curData = value as? Data {
+                    do {
+                        let mainData = try JSONSerialization.jsonObject(with: curData, options: .mutableContainers)
+                        print(mainData)
+                    } catch let err {
+                        print("Some Error")
+                    }
+                } else {
+                    print("Some Another Error")
+                }
+            case .failure(error: let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     @IBAction func forgotBtnTapped(_ sender: Any) {

@@ -21,7 +21,6 @@ class APIManager {
         if let params = serviceType.parameters {
             do {
                 if serviceType.method == "POST" {
-                    print(params)
                     request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
 
                 } else {
