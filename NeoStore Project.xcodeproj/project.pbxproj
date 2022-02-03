@@ -17,6 +17,8 @@
 		925EE48027A9443900B2B73F /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE47E27A9443900B2B73F /* DemoViewController.swift */; };
 		925EE48127A9443900B2B73F /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925EE47F27A9443900B2B73F /* DemoViewController.xib */; };
 		925EE48E27A9556300B2B73F /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE48D27A9556300B2B73F /* StringConstants.swift */; };
+		92A92DE927AAA13000FCEE14 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A92DE727AAA13000FCEE14 /* LoginScreenViewController.swift */; };
+		92A92DEA27AAA13000FCEE14 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A92DE827AAA13000FCEE14 /* LoginScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		925EE47E27A9443900B2B73F /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		925EE47F27A9443900B2B73F /* DemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
 		925EE48D27A9556300B2B73F /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		92A92DE727AAA13000FCEE14 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		92A92DE827AAA13000FCEE14 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		925EE48827A9522700B2B73F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				92A92DE627AAA0D900FCEE14 /* LoginScreenViewController */,
 				925EE48927A9528E00B2B73F /* DemoViewController */,
 			);
 			path = Controllers;
@@ -165,6 +170,15 @@
 			children = (
 			);
 			path = APIs;
+			sourceTree = "<group>";
+		};
+		92A92DE627AAA0D900FCEE14 /* LoginScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92A92DE727AAA13000FCEE14 /* LoginScreenViewController.swift */,
+				92A92DE827AAA13000FCEE14 /* LoginScreenViewController.xib */,
+			);
+			path = LoginScreenViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +240,7 @@
 			files = (
 				925EE47727A93FDD00B2B73F /* LaunchScreen.storyboard in Resources */,
 				925EE48127A9443900B2B73F /* DemoViewController.xib in Resources */,
+				92A92DEA27AAA13000FCEE14 /* LoginScreenViewController.xib in Resources */,
 				925EE47427A93FDD00B2B73F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +254,7 @@
 			files = (
 				92518AFB27A992000037CB3D /* EnumConstants.swift in Sources */,
 				92518AF927A9917E0037CB3D /* APIManager.swift in Sources */,
+				92A92DE927AAA13000FCEE14 /* LoginScreenViewController.swift in Sources */,
 				925EE48E27A9556300B2B73F /* StringConstants.swift in Sources */,
 				925EE48027A9443900B2B73F /* DemoViewController.swift in Sources */,
 				925EE46B27A93FDB00B2B73F /* AppDelegate.swift in Sources */,
