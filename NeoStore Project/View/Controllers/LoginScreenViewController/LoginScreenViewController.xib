@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,20 +25,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8V-IB-Txf">
-                    <rect key="frame" x="13.5" y="802.5" width="387" height="46"/>
+                    <rect key="frame" x="13.5" y="420.5" width="293" height="46"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONT HAVE AN ACCOUNT?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2G-On-TaN">
-                            <rect key="frame" x="0.0" y="0.0" width="341" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="247" height="46"/>
                             <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WPw-57-RQ5">
-                            <rect key="frame" x="341" y="2" width="46" height="42"/>
+                            <rect key="frame" x="247" y="2" width="46" height="42"/>
                             <color key="backgroundColor" red="0.61960784313725492" green="0.0039215686274509803" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -53,13 +53,13 @@
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDt-P0-hXg">
-                    <rect key="frame" x="33.5" y="44" width="347" height="725.5"/>
+                    <rect key="frame" x="33.5" y="0.0" width="253" height="387.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fM-Os-E8z">
-                            <rect key="frame" x="0.0" y="212.5" width="347" height="300"/>
+                            <rect key="frame" x="0.0" y="43.5" width="253" height="300"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NeoSTORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i4-u5-ELo">
-                                    <rect key="frame" x="0.0" y="0.0" width="347" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="c7Y-l5-47C"/>
                                     </constraints>
@@ -68,7 +68,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JHi-e3-qCE">
-                                    <rect key="frame" x="0.0" y="94.5" width="347" height="40"/>
+                                    <rect key="frame" x="0.0" y="94.5" width="253" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="nwv-Sn-bxF"/>
@@ -83,7 +83,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GDs-XV-obB">
-                                    <rect key="frame" x="0.0" y="150.5" width="347" height="40"/>
+                                    <rect key="frame" x="0.0" y="150.5" width="253" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="y15-yC-wmy"/>
@@ -97,10 +97,10 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYi-QF-Nfo">
-                                    <rect key="frame" x="0.0" y="224" width="347" height="38"/>
+                                    <rect key="frame" x="0.0" y="224" width="253" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="38" id="LTT-rX-GdZ"/>
+                                        <constraint firstAttribute="height" constant="40" id="LTT-rX-GdZ"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="26"/>
                                     <state key="normal" title="LOGIN">
@@ -116,7 +116,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-pn-Mgq">
-                                    <rect key="frame" x="92" y="283.5" width="163" height="16.5"/>
+                                    <rect key="frame" x="45" y="285.5" width="163" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="163" id="aj7-k4-1x5"/>
                                     </constraints>
