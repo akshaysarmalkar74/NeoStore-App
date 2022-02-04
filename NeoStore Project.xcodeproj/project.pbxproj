@@ -16,8 +16,6 @@
 		925EE46D27A93FDB00B2B73F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE46C27A93FDB00B2B73F /* SceneDelegate.swift */; };
 		925EE47427A93FDD00B2B73F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925EE47327A93FDD00B2B73F /* Assets.xcassets */; };
 		925EE47727A93FDD00B2B73F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925EE47527A93FDD00B2B73F /* LaunchScreen.storyboard */; };
-		925EE48027A9443900B2B73F /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE47E27A9443900B2B73F /* DemoViewController.swift */; };
-		925EE48127A9443900B2B73F /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925EE47F27A9443900B2B73F /* DemoViewController.xib */; };
 		925EE48E27A9556300B2B73F /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EE48D27A9556300B2B73F /* StringConstants.swift */; };
 		92A92DE927AAA13000FCEE14 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A92DE727AAA13000FCEE14 /* LoginScreenViewController.swift */; };
 		92A92DEA27AAA13000FCEE14 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A92DE827AAA13000FCEE14 /* LoginScreenViewController.xib */; };
@@ -39,8 +37,6 @@
 		925EE47327A93FDD00B2B73F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925EE47627A93FDD00B2B73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925EE47827A93FDD00B2B73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		925EE47E27A9443900B2B73F /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
-		925EE47F27A9443900B2B73F /* DemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
 		925EE48D27A9556300B2B73F /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		92A92DE727AAA13000FCEE14 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		92A92DE827AAA13000FCEE14 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
@@ -149,18 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				92A92DE627AAA0D900FCEE14 /* LoginScreenViewController */,
-				925EE48927A9528E00B2B73F /* DemoViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		925EE48927A9528E00B2B73F /* DemoViewController */ = {
-			isa = PBXGroup;
-			children = (
-				925EE47E27A9443900B2B73F /* DemoViewController.swift */,
-				925EE47F27A9443900B2B73F /* DemoViewController.xib */,
-			);
-			path = DemoViewController;
 			sourceTree = "<group>";
 		};
 		925EE48A27A952E000B2B73F /* Services */ = {
@@ -298,7 +284,6 @@
 			files = (
 				925EE47727A93FDD00B2B73F /* LaunchScreen.storyboard in Resources */,
 				92A92DF227AB9C1B00FCEE14 /* GothamBold.otf in Resources */,
-				925EE48127A9443900B2B73F /* DemoViewController.xib in Resources */,
 				92A92DEA27AAA13000FCEE14 /* LoginScreenViewController.xib in Resources */,
 				925EE47427A93FDD00B2B73F /* Assets.xcassets in Resources */,
 				92A92DF427AB9C3100FCEE14 /* GothamMedium.otf in Resources */,
@@ -319,7 +304,6 @@
 				92F7A07127ACE8BC00D53B68 /* Validator.swift in Sources */,
 				92A92DEF27AB9A2100FCEE14 /* ColorExtension.swift in Sources */,
 				925EE48E27A9556300B2B73F /* StringConstants.swift in Sources */,
-				925EE48027A9443900B2B73F /* DemoViewController.swift in Sources */,
 				92028AC427ABD71000C54D37 /* UserService.swift in Sources */,
 				925EE46B27A93FDB00B2B73F /* AppDelegate.swift in Sources */,
 				925EE46D27A93FDB00B2B73F /* SceneDelegate.swift in Sources */,
