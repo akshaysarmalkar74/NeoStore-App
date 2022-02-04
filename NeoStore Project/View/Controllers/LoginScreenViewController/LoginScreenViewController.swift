@@ -44,7 +44,16 @@ class LoginScreenViewController: UIViewController {
     }
 
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        viewModel.doLogin(username: "akshay@kumar.com", password: "akshay123")
+        // Validate Email And Password
+        let emailResult = Validator.email(str: usernameField.text ?? "")
+        let passwordResult  = Validator.password(str: passwordField.text ?? "")
+        
+        if emailResult && passwordResult {
+            viewModel.doLogin(username: "akshay@kumar.com", password: "akshay123")
+        } else {
+            print("Some Data is Missing or Improper Data")
+        }
+        
     }
     
     @IBAction func forgotBtnTapped(_ sender: Any) {
