@@ -30,8 +30,8 @@ class RegisterScreenViewController: UIViewController {
         setUp()
         
         // Set Notification Observers
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppeared), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappeared), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppeared(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappeared(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     init() {
@@ -74,17 +74,25 @@ class RegisterScreenViewController: UIViewController {
     }
     
     // KeyBoard Notification Functions
-    @objc func keyboardAppeared() {
+    @objc func keyboardAppeared(_ notification: Notification) {
         if !isKeyBoardExpanded {
-            self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height + 250)
-            isKeyBoardExpanded = true
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height + keyboardHeight)
+                isKeyBoardExpanded = true
+            }
         }
     }
     
-    @objc func keyboardDisappeared() {
+    @objc func keyboardDisappeared(_ notification: Notification) {
         if isKeyBoardExpanded {
-            self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height - 250)
-            isKeyBoardExpanded = true
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height - keyboardHeight)
+                isKeyBoardExpanded = false
+            }
         }
     }
     
