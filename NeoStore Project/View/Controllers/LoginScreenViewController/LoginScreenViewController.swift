@@ -18,7 +18,7 @@ class LoginScreenViewController: UIViewController {
     
     init(viewModel: LoginScreenViewType) {
         self.viewModel = viewModel
-        super.init(nibName: "LoginScreenViewController", bundle: nil)
+        super.init(nibName: StringConstants.loginViewController, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -113,6 +113,6 @@ extension LoginScreenViewController {
     }
     
     @objc func plusIconTapped(_ sender: UITapGestureRecognizer) {
-        print("Plus Icon Tapped")
+        navigationController?.pushViewController(RegisterScreenViewController(), animated: true)
     }
 }

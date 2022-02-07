@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		92028AC427ABD71000C54D37 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92028AC327ABD71000C54D37 /* UserService.swift */; };
 		92028AC627AC20A400C54D37 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92028AC527AC20A400C54D37 /* LoginScreenViewModel.swift */; };
+		923D4DFD27AD031000598034 /* RegisterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D4DFB27AD031000598034 /* RegisterScreenViewController.swift */; };
+		923D4DFE27AD031000598034 /* RegisterScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923D4DFC27AD031000598034 /* RegisterScreenViewController.xib */; };
 		92518AF727A9779F0037CB3D /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92518AF627A9779F0037CB3D /* APIServices.swift */; };
 		92518AF927A9917E0037CB3D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92518AF827A9917E0037CB3D /* APIManager.swift */; };
 		92518AFB27A992000037CB3D /* EnumConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92518AFA27A992000037CB3D /* EnumConstants.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		92028AC327ABD71000C54D37 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		92028AC527AC20A400C54D37 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
+		923D4DFB27AD031000598034 /* RegisterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewController.swift; sourceTree = "<group>"; };
+		923D4DFC27AD031000598034 /* RegisterScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterScreenViewController.xib; sourceTree = "<group>"; };
 		92518AF627A9779F0037CB3D /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		92518AF827A9917E0037CB3D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		92518AFA27A992000037CB3D /* EnumConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumConstants.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923D4DFA27AD02D900598034 /* RegisterScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				923D4DFB27AD031000598034 /* RegisterScreenViewController.swift */,
+				923D4DFC27AD031000598034 /* RegisterScreenViewController.xib */,
+			);
+			path = RegisterScreenViewController;
+			sourceTree = "<group>";
+		};
 		925EE45E27A93FDA00B2B73F = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 		925EE48827A9522700B2B73F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				923D4DFA27AD02D900598034 /* RegisterScreenViewController */,
 				92A92DE627AAA0D900FCEE14 /* LoginScreenViewController */,
 			);
 			path = Controllers;
@@ -284,6 +298,7 @@
 			files = (
 				925EE47727A93FDD00B2B73F /* LaunchScreen.storyboard in Resources */,
 				92A92DF227AB9C1B00FCEE14 /* GothamBold.otf in Resources */,
+				923D4DFE27AD031000598034 /* RegisterScreenViewController.xib in Resources */,
 				92A92DEA27AAA13000FCEE14 /* LoginScreenViewController.xib in Resources */,
 				925EE47427A93FDD00B2B73F /* Assets.xcassets in Resources */,
 				92A92DF427AB9C3100FCEE14 /* GothamMedium.otf in Resources */,
@@ -298,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92518AFB27A992000037CB3D /* EnumConstants.swift in Sources */,
+				923D4DFD27AD031000598034 /* RegisterScreenViewController.swift in Sources */,
 				92518AF927A9917E0037CB3D /* APIManager.swift in Sources */,
 				92028AC627AC20A400C54D37 /* LoginScreenViewModel.swift in Sources */,
 				92A92DE927AAA13000FCEE14 /* LoginScreenViewController.swift in Sources */,
