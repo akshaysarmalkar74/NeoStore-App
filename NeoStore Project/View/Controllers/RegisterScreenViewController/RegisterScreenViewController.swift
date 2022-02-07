@@ -20,10 +20,18 @@ class RegisterScreenViewController: UIViewController {
     @IBOutlet weak var maleBtn: UIButton!
     @IBOutlet weak var femaleBtn: UIButton!
     @IBOutlet weak var termsBtn: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    // Variables
+    var isKeyBoardExpanded: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        
+        // Set Notification Observers
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppeared), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappeared), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     init() {
@@ -62,6 +70,21 @@ class RegisterScreenViewController: UIViewController {
             print("Valid Data")
         } else {
             print("Some Data is missing/improper")
+        }
+    }
+    
+    // KeyBoard Notification Functions
+    @objc func keyboardAppeared() {
+        if !isKeyBoardExpanded {
+            self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height + 250)
+            isKeyBoardExpanded = true
+        }
+    }
+    
+    @objc func keyboardDisappeared() {
+        if isKeyBoardExpanded {
+            self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height - 250)
+            isKeyBoardExpanded = true
         }
     }
     

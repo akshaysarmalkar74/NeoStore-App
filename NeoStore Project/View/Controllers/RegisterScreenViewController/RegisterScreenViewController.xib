@@ -25,6 +25,7 @@
                 <outlet property="maleBtn" destination="chT-48-A5w" id="ZzG-gv-O8K"/>
                 <outlet property="passwordField" destination="5PL-Td-3pf" id="OVi-ND-G5U"/>
                 <outlet property="phoneField" destination="SfV-Lu-c6q" id="WcW-aX-blM"/>
+                <outlet property="scrollView" destination="OvA-V5-2gG" id="x1f-gH-ah4"/>
                 <outlet property="termsBtn" destination="wdg-5X-UNO" id="9bs-7S-ZN1"/>
                 <outlet property="termsLabel" destination="M9e-Hv-naw" id="3Ym-TQ-PmG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
