@@ -20,7 +20,8 @@ class Validator {
     
     // Validate Password
     static func password(str: String) -> Bool {
-        if str.count > 0 {
+        if str.count > 6 {
+            print("Password should be more than 6 Characters")
             return true
         }
         return false
@@ -55,6 +56,7 @@ class Validator {
         if password == confirmPass {
             return true
         }
+        print("Passwords do not match")
         return false
     }
     

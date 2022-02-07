@@ -19,19 +19,19 @@ class APIManager {
         request.httpMethod = serviceType.method
         // Fetch Parameters if any
         if let params = serviceType.parameters {
-            do {
-                if serviceType.method == "POST" {
-                    request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-
-                } else {
-                    var urlComponents = URLComponents(string: serviceType.path)
-                    urlComponents?.queryItems = params.map({ (key, val) in
-                        URLQueryItem(name: key, value: String(describing: val))
-                    })
-                    request.url = urlComponents?.url
-                }
-            } catch let err {
-                print(err.localizedDescription)
+            if serviceType.method == "POST" {
+                var requestBodyComponents = URLComponents()
+                requestBodyComponents.queryItems = params.map({ (key, val) in
+                    URLQueryItem(name: key, value: String(describing: val))
+                })
+                request.httpBody = requestBodyComponents.query?.data(using: .utf8)
+                
+            } else {
+                var urlComponents = URLComponents(string: serviceType.path)
+                urlComponents?.queryItems = params.map({ (key, val) in
+                    URLQueryItem(name: key, value: String(describing: val))
+                })
+                request.url = urlComponents?.url
             }
         }
         

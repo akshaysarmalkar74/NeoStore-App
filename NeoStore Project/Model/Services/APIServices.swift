@@ -16,7 +16,7 @@ let PROD_ROOT_POINT = "https://someApi.com"
 // Default Headers
 
 let contentKey = "Content-Type"
-let contentValue = "application/json"
+let contentValue = "application/x-www-form-urlencoded"
 
 enum NetworkingEnviroment: String {
     case developement
