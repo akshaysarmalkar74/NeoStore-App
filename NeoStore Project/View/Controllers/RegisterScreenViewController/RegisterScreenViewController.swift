@@ -24,6 +24,7 @@ class RegisterScreenViewController: UIViewController {
     
     // Variables
     var isKeyBoardExpanded: Bool = false
+    var viewModel: RegisterScreenViewType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,8 @@ class RegisterScreenViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappeared(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    init() {
+    init(viewModel: RegisterScreenViewType) {
+        self.viewModel = viewModel
         super.init(nibName: StringConstants.registerViewController, bundle: nil)
     }
     
@@ -67,7 +69,10 @@ class RegisterScreenViewController: UIViewController {
         
         // Check all Validations
         if firstNameValid && lastNameValid && emailValid && passwordValid && confirmPasswordValid && phoneValid && termsValid {
-            print("Valid Data")
+            let actualPhoneNum: Int = Int(phoneField.text!)!
+            let genderValue: String = maleBtn.isSelected ? "Male" : "Female"
+            
+            viewModel.doRegister(firstName: firstNameField.text!, lastName: lastNameField.text!, email: emailField.text!, password: passwordField.text!, confirmPassword: confirmPasswordField.text!, gender: genderValue, phoneNumber: actualPhoneNum)
         } else {
             print("Some Data is missing/improper")
         }

@@ -113,6 +113,7 @@ extension LoginScreenViewController {
     }
     
     @objc func plusIconTapped(_ sender: UITapGestureRecognizer) {
-        navigationController?.pushViewController(RegisterScreenViewController(), animated: true)
+        let viewModel = RegisterScreenViewModel()
+        navigationController?.pushViewController(RegisterScreenViewController(viewModel: viewModel), animated: true)
     }
 }
