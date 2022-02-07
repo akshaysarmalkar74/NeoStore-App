@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Validator {
     
@@ -20,6 +21,46 @@ class Validator {
     // Validate Password
     static func password(str: String) -> Bool {
         if str.count > 0 {
+            return true
+        }
+        return false
+    }
+    
+    // Validate First Name
+    static func firstName(str: String) -> Bool {
+        if str.count > 0 {
+            return true
+        }
+        return false
+    }
+    
+    // Validate Last Name
+    static func lastName(str: String) -> Bool {
+        if str.count > 0 {
+            return true
+        }
+        return false
+    }
+    
+    // Validate Phone Number
+    static func phoneNumber(str: String) -> Bool {
+        if str.count == 10 {
+            return true
+        }
+        return false
+    }
+    
+    // Validate Confirm Password
+    static func confirmPassword(password: String, confirmPass: String) -> Bool {
+        if password == confirmPass {
+            return true
+        }
+        return false
+    }
+    
+    // Validate Terms Button
+    static func termsChecked(btn: UIButton) -> Bool {
+        if btn.isSelected {
             return true
         }
         return false

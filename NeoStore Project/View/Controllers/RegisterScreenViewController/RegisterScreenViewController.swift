@@ -42,9 +42,27 @@ class RegisterScreenViewController: UIViewController {
         sender.isSelected = true
     }
     
-    
     @IBAction func termsBtnTapped(_ sender: UIButton) {
         termsBtn.isSelected = !termsBtn.isSelected
+    }
+    
+    
+    @IBAction func registerBtnTapped(_ sender: UIButton) {
+        // Get Validations Results
+        let firstNameValid = Validator.firstName(str: firstNameField.text ?? "")
+        let lastNameValid = Validator.lastName(str: lastNameField.text ?? "")
+        let emailValid = Validator.email(str: emailField.text ?? "")
+        let passwordValid = Validator.password(str: passwordField.text ?? "")
+        let confirmPasswordValid = Validator.confirmPassword(password: passwordField.text ?? "", confirmPass: confirmPasswordField.text ?? "")
+        let phoneValid = Validator.phoneNumber(str: phoneField.text ?? "")
+        let termsValid = Validator.termsChecked(btn: termsBtn)
+        
+        // Check all Validations
+        if firstNameValid && lastNameValid && emailValid && passwordValid && confirmPasswordValid && phoneValid && termsValid {
+            print("Valid Data")
+        } else {
+            print("Some Data is missing/improper")
+        }
     }
     
 }
@@ -93,12 +111,19 @@ extension RegisterScreenViewController {
     
     // Customise Navigation Bar
     func customiseNavbar() {
+        // Set Title
         self.title = "Register"
+        
+        // Customise Naviagtion Bar
         let height: CGFloat = 40
         let bounds = self.navigationController!.navigationBar.bounds
         self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
         self.navigationController?.navigationBar.barTintColor = .mainRed
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        // Customise Back Button Color & Title
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
     }
     
     // Add Tap Gesture to View
