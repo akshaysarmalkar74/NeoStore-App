@@ -11,14 +11,27 @@ import UIKit
 class Validator {
     
     // Validate Email
-    static func email(str: String) -> Bool {
+    static func email(str: String) -> (message: String?, result: Bool) {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: str)
+        let result = emailPred.evaluate(with: str)
+        
+        if result {
+            return (nil, true)
+        }
+        return ("Please enter Valid Email", false)
     }
     
-    // Validate Password
+    // Login Validate Password
+    static func loginPassword(str: String) -> (message: String?, result: Bool) {
+        if str.count > 0 {
+            return (nil, true)
+        }
+        return ("Please enter password", false)
+    }
+    
+    // Register Validate Password
     static func password(str: String) -> Bool {
         if str.count > 6 {
             print("Password should be more than 6 Characters")
