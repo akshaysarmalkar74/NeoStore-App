@@ -45,13 +45,17 @@ class LoginScreenViewController: UIViewController {
 
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         // Validate Email And Password
-        let emailResult = Validator.email(str: usernameField.text ?? "")
-        let passwordResult  = Validator.password(str: passwordField.text ?? "")
+        let emailTuple = Validator.email(str: usernameField.text ?? "")
+        let passwordTuple  = Validator.loginPassword(str: passwordField.text ?? "")
         
-        if emailResult && passwordResult {
-            viewModel.doLogin(username: "akshay@kumar.com", password: "akshay123")
+        if emailTuple.result && passwordTuple.result {
+            viewModel.doLogin(username: usernameField.text!, password: passwordField.text!)
+        } else if !emailTuple.result {
+            // Show Alert for Email
+            showErrorAlert(error: emailTuple.message)
         } else {
-            print("Some Data is Missing or Improper Data")
+            // Show Alert for password
+            showErrorAlert(error: passwordTuple.message)
         }
         
     }
@@ -59,6 +63,21 @@ class LoginScreenViewController: UIViewController {
     @IBAction func forgotBtnTapped(_ sender: Any) {
         print("Forgot Tapped")
     }
+    
+    // Error Alert Function
+    func showErrorAlert(error: String?) {
+        let alertVc = UIAlertController(title: "Something went wrong!", message: error, preferredStyle: .alert)
+        let alertBtn = UIAlertAction(title: "Okay", style: .default) { [weak self] alertAction in
+            self?.dismiss(animated: true, completion: nil)
+        }
+        
+        // Add Button to Alert
+        alertVc.addAction(alertBtn)
+        
+        // Present Alert
+        self.present(alertVc, animated: true, completion: nil)
+    }
+    
 }
 
 extension LoginScreenViewController {

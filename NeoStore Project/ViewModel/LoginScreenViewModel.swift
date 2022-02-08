@@ -15,7 +15,7 @@ class LoginScreenViewModel: LoginScreenViewType {
     
     // MARK:- Methods
     func doLogin(username: String, password: String) {
-        UserService.userLogin(username: "akshay@kumar.com", password: "akshay123") { res in
+        UserService.userLogin(username: username, password: password) { res in
             switch res {
             case .success(value: let value):
                 if let curData = value as? Data {
