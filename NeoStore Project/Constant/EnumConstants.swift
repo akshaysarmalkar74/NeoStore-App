@@ -11,3 +11,9 @@ enum APIResponse<T> {
     case success(value: T)
     case failure(error: Error)
 }
+
+enum UserDefaultsKeys : String {
+    case isLoggedIn
+    case userToken
+    case user
+}
