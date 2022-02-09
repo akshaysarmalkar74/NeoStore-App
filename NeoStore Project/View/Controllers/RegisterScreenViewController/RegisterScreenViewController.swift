@@ -29,6 +29,7 @@ class RegisterScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        setupObservers()
         
         // Set Notification Observers
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppeared(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -153,6 +154,26 @@ extension RegisterScreenViewController {
         
         // Change Terms Label Text Color
         termsLabel.textColor = .white
+    }
+    
+    // Setup Observers
+    func setupObservers() {
+        self.viewModel.userRegisterStatus.bindAndFire { [weak self] (value) in
+            guard let `self` = self else {return}
+            switch value {
+            case .success:
+                DispatchQueue.main.async {
+                    let vc = TestViewController()
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            case .failure(let msg):
+                DispatchQueue.main.async {
+                    self.showErrorAlert(error: msg)
+                }
+            case .none:
+                break
+            }
+        }
     }
     
     // Customise Text Fields
