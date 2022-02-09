@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var rootVc: UIViewController!
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,8 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Custom Code
         let window = UIWindow(windowScene: windowScene)
-        let viewModel = LoginScreenViewModel()
-        let rootVc = LoginScreenViewController(viewModel: viewModel)
+        // Check if user is logged in
+        let isLoggedIn = UserDefaults.standard.isLoggedIn()
+        
+        if isLoggedIn {
+            rootVc = TestViewController()
+        } else {
+            let viewModel = LoginScreenViewModel()
+            rootVc = LoginScreenViewController(viewModel: viewModel)
+        }
         let navVc = UINavigationController(rootViewController: rootVc)
         window.rootViewController = navVc
         self.window = window

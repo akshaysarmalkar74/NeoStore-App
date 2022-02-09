@@ -11,12 +11,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var rootVc: UIViewController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow()
-        let viewModel = LoginScreenViewModel()
-        let rootVc = LoginScreenViewController(viewModel: viewModel)
+        
+        // Check if user is logged in
+        let isLoggedIn = UserDefaults.standard.isLoggedIn()
+        
+        if isLoggedIn {
+            rootVc = TestViewController()
+        } else {
+            let viewModel = LoginScreenViewModel()
+            rootVc = LoginScreenViewController(viewModel: viewModel)
+        }
         let navVc = UINavigationController(rootViewController: rootVc)
         window?.rootViewController = navVc
         window?.makeKeyAndVisible()
