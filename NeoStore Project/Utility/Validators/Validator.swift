@@ -32,52 +32,53 @@ class Validator {
     }
     
     // Register Validate Password
-    static func password(str: String) -> Bool {
-        if str.count > 6 {
-            print("Password should be more than 6 Characters")
-            return true
+    static func registerPassword(str: String) -> (message: String?, result: Bool) {
+        if str.count == 0 {
+            return ("Please enter password", false)
+        } else if str.count < 6 {
+            return ("Password should be more than 6 characters", false)
+        } else {
+            return (nil, true)
         }
-        return false
     }
     
     // Validate First Name
-    static func firstName(str: String) -> Bool {
+    static func firstName(str: String) -> (message: String?, result: Bool) {
         if str.count > 0 {
-            return true
+            return (nil, true)
         }
-        return false
+        return ("Please enter first name", false)
     }
     
     // Validate Last Name
-    static func lastName(str: String) -> Bool {
+    static func lastName(str: String) -> (message: String?, result: Bool) {
         if str.count > 0 {
-            return true
+            return (nil, true)
         }
-        return false
+        return ("Please enter last name", false)
     }
     
     // Validate Phone Number
-    static func phoneNumber(str: String) -> Bool {
+    static func phoneNumber(str: String) -> (message: String?, result: Bool) {
         if str.count == 10 {
-            return true
+            return (nil, true)
         }
-        return false
+        return ("Phone should be 10 numbers exactly", false)
     }
     
     // Validate Confirm Password
-    static func confirmPassword(password: String, confirmPass: String) -> Bool {
+    static func confirmPassword(password: String, confirmPass: String) -> (message: String?, result: Bool) {
         if password == confirmPass {
-            return true
+            return (nil, true)
         }
-        print("Passwords do not match")
-        return false
+        return ("Passwords do not match", false)
     }
     
     // Validate Terms Button
-    static func termsChecked(btn: UIButton) -> Bool {
+    static func termsChecked(btn: UIButton) -> (message: String?, result: Bool) {
         if btn.isSelected {
-            return true
+            return (nil, true)
         }
-        return false
+        return ("Please agree to Terms & Conditions", false)
     }
 }
