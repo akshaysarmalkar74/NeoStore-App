@@ -28,13 +28,13 @@ class LoginScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUp()
+        setupObservers()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setUp()
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
@@ -97,6 +97,26 @@ extension LoginScreenViewController {
         // Customise Text Fields
         customiseTextField(textField: usernameField, imgName: "username_icon")
         customiseTextField(textField: passwordField, imgName: "password_icon")
+    }
+    
+    // Setup Observers
+    func setupObservers() {
+        self.viewModel.userLoginStatus.bindAndFire { [weak self] (value) in
+            guard let `self` = self else {return}
+            switch value {
+            case .success:
+                DispatchQueue.main.async {
+                    let vc = TestViewController()
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            case .failure(let msg):
+                DispatchQueue.main.async {
+                    self.showErrorAlert(error: msg)
+                }
+            case .none:
+                break
+            }
+        }
     }
     
     // Customise Text Fields
